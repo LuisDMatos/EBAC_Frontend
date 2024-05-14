@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+header {
+    background-color: rgb(210, 170, 247);
+    padding: 24px;
+    font-size: 24px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    padding: 0 8px;
+    text-decoration: none;
+    font-size: 20px;
+    border-bottom: 1px solid transparent;
+    font-weight: bold;
+}
+
+header a:hover {
+    border-color:rgb(128, 12, 236);
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.fachada img {
+    max-width: 100%;
+    padding: 20px;
+}
+
+.sobre h2 {   
+    margin-top: 36px;
+    color: rgb(128, 12, 236);
+    border-bottom: 2px solid rgb(128, 12, 236);
+}
+
+.sobre h3 {
+padding: 16px;
+font-size: 16px;
+}
+
+.produto {
+    display: grid;
+    grid-template-columns: repeat(4, 24,25%);
+    column-gap: 1%;
+    row-gap: 5%;
+    padding: 36px;
+}
+
+.produto a{
+    text-decoration: none;
+    color: #000;
+}
+
+.produtos img {
+    max-width: 320px;
+    width: 100%;
+}
+
+.titulo-produtos {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 36px;
+    color: rgb(128, 12, 236);
+    border-bottom: 2px solid rgb(128, 12, 236);
+}
+
+button {
+    border: none;
+    background-color: #1971c4;
+    color: #fff;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #67acec;
+}
+
+@media screen and (max-width: 767px) {
+    .conteudo {
+        display: block;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+    
+    .produtos {
+        display: block;
+    }
+
+    .produtos .produto {
+        margin-bottom: 24px;
+    }
+
+    header {
+        font-size: 14px;
+    }
+
+    header a {
+        padding: 24px;
+        font-size: 1.2em;
+        text-align: center;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .conteudo {
+        display: block;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+    }
+}
